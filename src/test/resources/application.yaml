@@ -1,0 +1,8 @@
+# Tests run against in-memory H2 in PostgreSQL compatibility mode, so no database
+# service is needed on the build machine or in CI.
+spring:
+  datasource:
+    url: jdbc:h2:mem:wpfda;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password: ''
+    driver-class-name: org.h2.Driver

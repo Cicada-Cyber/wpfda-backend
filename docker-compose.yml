@@ -1,0 +1,17 @@
+# Local dev database. Credentials come from 1Password (Code vault, item wpfda-postgres-dev):
+#   op run --env-file=.env.op -- docker compose up -d
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: ${DB_NAME:-wpfda}
+      POSTGRES_USER: ${DB_USERNAME:-wpfda}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?run via op run so the password is injected}
+    ports:
+      - '5432:5432'
+    volumes:
+      # postgres:18 images moved the volume mount point up to /var/lib/postgresql
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
