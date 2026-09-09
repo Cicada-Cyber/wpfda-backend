@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a change or addition to the WPFDA platform
+title: 'Feature: '
+labels: [enhancement]
+body:
+  - type: checkboxes
+    attributes:
+      label: Before you start
+      options:
+        - label: I have searched existing issues and this has not been requested
+          required: true
+  - type: textarea
+    attributes:
+      label: Problem
+      description: Who has this problem and when? Describe the situation, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed solution
+      description: What should happen? Rough sketches or examples from other sites help.
+  - type: dropdown
+    attributes:
+      label: Who is it for?
+      options:
+        - Public visitors
+        - Club managers
+        - WPFDA admins
+        - Players
+        - Several of these
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: Links to the product spec, related issues, or context.

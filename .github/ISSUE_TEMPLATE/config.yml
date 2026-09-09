@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Website / UI issue
+    url: https://github.com/Cicada-Cyber/wpfda-frontend/issues/new/choose
+    about: Problems with pages, layout or the browser app belong in wpfda-frontend.
+  - name: Security vulnerability
+    url: https://github.com/Cicada-Cyber/wpfda-backend/security/advisories/new
+    about: Report privately. Never open a public issue for a security problem.

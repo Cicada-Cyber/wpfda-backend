@@ -32,3 +32,18 @@ Configuration is environment-driven: `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, `PO
 docker build -t wpfda-backend .
 docker run -p 8080:8080 -e DB_URL=... -e DB_USERNAME=... -e DB_PASSWORD=... wpfda-backend
 ```
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the process and contributor licence terms,
+and [AGENTS.md](AGENTS.md) for code conventions. A Dev Container is included, so opening
+the repo in VS Code or Codespaces gives a ready environment with Java 21 and Maven.
+
+Before opening a pull request, run the same checks CI runs:
+
+```sh
+./mvnw spotless:apply   # format Java sources
+./mvnw -B verify        # format check, compile, tests
+```
+
+Security issues: see [SECURITY.md](SECURITY.md). Licence: proprietary, see [LICENSE](LICENSE).
